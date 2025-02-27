@@ -1,26 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_is_negative.c                                   :+:      :+:    :+:   */
+/*   ft_div_mod.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: milenaaraujorodrigues2102 <milenaaraujo    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/27 16:18:53 by milenaarauj       #+#    #+#             */
-/*   Updated: 2025/02/27 16:27:09 by milenaarauj      ###   ########.fr       */
+/*   Created: 2025/02/27 16:36:16 by milenaarauj       #+#    #+#             */
+/*   Updated: 2025/02/27 16:52:50 by milenaarauj      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void ft_is_negative(int n)
+#include <stdio.h>
+void ft_div_mod(int a, int b, int *div, int *mod)
 {
-    if(n >= 0)
-        write(1, "P", 1);
-    else
-        write(1, "N", 1);
+    *div = a / b;
+    *mod = a % b;
 }
 int main()
 {
-    ft_is_negative(42);
+    int a;
+    a = 4;
+    int b;
+    b = 2;
+    int div;
+    int mod;
+    ft_div_mod(a, b, &div, &mod);
+    printf("a divisao é:%d e o resto:%d", div, mod);
     return(0);
 }

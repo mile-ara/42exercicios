@@ -1,26 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_is_negative.c                                   :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: milenaaraujorodrigues2102 <milenaaraujo    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/27 16:18:53 by milenaarauj       #+#    #+#             */
-/*   Updated: 2025/02/27 16:27:09 by milenaarauj      ###   ########.fr       */
+/*   Created: 2025/02/27 17:42:38 by milenaarauj       #+#    #+#             */
+/*   Updated: 2025/02/27 17:50:03 by milenaarauj      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void ft_is_negative(int n)
+void ft_putstr(char *str)
 {
-    if(n >= 0)
-        write(1, "P", 1);
-    else
-        write(1, "N", 1);
+    int i;
+    i = 0;
+    while(str[i] != '\0')
+    {
+        write(1, &str[i], 1);
+        i++;
+    }
 }
 int main()
 {
-    ft_is_negative(42);
+    ft_putstr("conchinha");
     return(0);
 }

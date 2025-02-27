@@ -1,26 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_is_negative.c                                   :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: milenaaraujorodrigues2102 <milenaaraujo    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/27 16:18:53 by milenaarauj       #+#    #+#             */
-/*   Updated: 2025/02/27 16:27:09 by milenaarauj      ###   ########.fr       */
+/*   Created: 2025/02/27 17:51:49 by milenaarauj       #+#    #+#             */
+/*   Updated: 2025/02/27 18:11:25 by milenaarauj      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include <stdio.h>
 
-void ft_is_negative(int n)
+int ft_strlen(char *str)
 {
-    if(n >= 0)
-        write(1, "P", 1);
-    else
-        write(1, "N", 1);
+    int i;
+    i = 0;
+    while(str[i])
+    {
+        i++;
+    }
+    return(i);
 }
 int main()
 {
-    ft_is_negative(42);
+    char *str;
+    str = "ola";
+    printf("%d", ft_strlen(str));
     return(0);
 }

@@ -1,26 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_is_negative.c                                   :+:      :+:    :+:   */
+/*   ft_ft.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: milenaaraujorodrigues2102 <milenaaraujo    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/27 16:18:53 by milenaarauj       #+#    #+#             */
-/*   Updated: 2025/02/27 16:27:09 by milenaarauj      ###   ########.fr       */
+/*   Created: 2025/02/27 16:30:18 by milenaarauj       #+#    #+#             */
+/*   Updated: 2025/02/27 16:30:19 by milenaarauj      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include <stdio.h>
 
-void ft_is_negative(int n)
+void ft_ft(int *nbr)
 {
-    if(n >= 0)
-        write(1, "P", 1);
-    else
-        write(1, "N", 1);
+    *nbr = 100;
 }
 int main()
 {
-    ft_is_negative(42);
+    int nbr = 50;
+    ft_ft(&nbr);
+    printf("%d", nbr);
     return(0);
 }
